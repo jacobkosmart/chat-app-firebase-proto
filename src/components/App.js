@@ -8,11 +8,13 @@ function App() {
   // authService.currentUser 를 통해 로그인 되었는지 안되었는지 확인 할 수 있음 (로그인 안되어 있으면 null 이 return )
   const [init, setInit] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [userObj, setUserObj] = useState(null);
 
   useEffect(() => {
     authService.onAuthStateChanged((user) => {
       if (user) {
         setIsLoggedIn(true);
+        setUserObj(user);
       } else {
         setIsLoggedIn(false);
       }
@@ -21,7 +23,7 @@ function App() {
   }, [])
   return (
     <>
-      {init ? <AppRouter isLoggedIn={isLoggedIn} /> : "Initializing...."}
+      {init ? <AppRouter isLoggedIn={isLoggedIn} userObj={userObj}/> : "Initializing...."}
       <footer>&copy; {new Date().getFullYear()} Jacob Ko</footer>
     </>
   );

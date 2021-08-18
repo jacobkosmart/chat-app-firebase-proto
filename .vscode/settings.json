@@ -1,4 +1,7 @@
 {
-  "cSpell.words": ["MESSAGIN", "fbase"],
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "cSpell.words": ["Firestore", "MESSAGIN", "fbase", "uuidv"],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
