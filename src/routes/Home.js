@@ -7,7 +7,7 @@ const Home = ({ userObj }) => {
   // State
   const [chat, setChat] = useState("");
   const [chats, setChats] = useState([]);
-  const [attachment, setAttachment] = useState();
+  const [attachment, setAttachment] = useState("");
 
   // read DB realtime
   useEffect(() => {
