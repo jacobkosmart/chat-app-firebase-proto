@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/chat-app-firebase-proto/static/js/main.bcdcef40.chunk.js",
-    "main.js.map": "/chat-app-firebase-proto/static/js/main.bcdcef40.chunk.js.map",
+    "main.js": "/chat-app-firebase-proto/static/js/main.a2046840.chunk.js",
+    "main.js.map": "/chat-app-firebase-proto/static/js/main.a2046840.chunk.js.map",
     "runtime-main.js": "/chat-app-firebase-proto/static/js/runtime-main.a6282b5d.js",
     "runtime-main.js.map": "/chat-app-firebase-proto/static/js/runtime-main.a6282b5d.js.map",
     "static/js/2.7a9f41f7.chunk.js": "/chat-app-firebase-proto/static/js/2.7a9f41f7.chunk.js",
@@ -12,6 +12,6 @@
   "entrypoints": [
     "static/js/runtime-main.a6282b5d.js",
     "static/js/2.7a9f41f7.chunk.js",
-    "static/js/main.bcdcef40.chunk.js"
+    "static/js/main.a2046840.chunk.js"
   ]
 }
