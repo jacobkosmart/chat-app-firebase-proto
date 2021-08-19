@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/jacobkosmart/chat-app-firebase-proto/static/js/main.24889f6e.chunk.js",
-    "main.js.map": "/jacobkosmart/chat-app-firebase-proto/static/js/main.24889f6e.chunk.js.map",
-    "runtime-main.js": "/jacobkosmart/chat-app-firebase-proto/static/js/runtime-main.249630b0.js",
-    "runtime-main.js.map": "/jacobkosmart/chat-app-firebase-proto/static/js/runtime-main.249630b0.js.map",
-    "static/js/2.7d5e18c3.chunk.js": "/jacobkosmart/chat-app-firebase-proto/static/js/2.7d5e18c3.chunk.js",
-    "static/js/2.7d5e18c3.chunk.js.map": "/jacobkosmart/chat-app-firebase-proto/static/js/2.7d5e18c3.chunk.js.map",
-    "index.html": "/jacobkosmart/chat-app-firebase-proto/index.html",
-    "static/js/2.7d5e18c3.chunk.js.LICENSE.txt": "/jacobkosmart/chat-app-firebase-proto/static/js/2.7d5e18c3.chunk.js.LICENSE.txt"
+    "main.js": "https://jacobkosmart.githob.io/chat-app-firebase-proto/static/js/main.5cf2aca6.chunk.js",
+    "main.js.map": "https://jacobkosmart.githob.io/chat-app-firebase-proto/static/js/main.5cf2aca6.chunk.js.map",
+    "runtime-main.js": "https://jacobkosmart.githob.io/chat-app-firebase-proto/static/js/runtime-main.47af32aa.js",
+    "runtime-main.js.map": "https://jacobkosmart.githob.io/chat-app-firebase-proto/static/js/runtime-main.47af32aa.js.map",
+    "static/js/2.07ae20b3.chunk.js": "https://jacobkosmart.githob.io/chat-app-firebase-proto/static/js/2.07ae20b3.chunk.js",
+    "static/js/2.07ae20b3.chunk.js.map": "https://jacobkosmart.githob.io/chat-app-firebase-proto/static/js/2.07ae20b3.chunk.js.map",
+    "index.html": "https://jacobkosmart.githob.io/chat-app-firebase-proto/index.html",
+    "static/js/2.07ae20b3.chunk.js.LICENSE.txt": "https://jacobkosmart.githob.io/chat-app-firebase-proto/static/js/2.07ae20b3.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.249630b0.js",
-    "static/js/2.7d5e18c3.chunk.js",
-    "static/js/main.24889f6e.chunk.js"
+    "static/js/runtime-main.47af32aa.js",
+    "static/js/2.07ae20b3.chunk.js",
+    "static/js/main.5cf2aca6.chunk.js"
   ]
 }
