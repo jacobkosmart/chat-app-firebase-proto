@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "https://jacobko.info/chat-app-firebase-proto/static/js/main.c9044681.chunk.js",
-    "main.js.map": "https://jacobko.info/chat-app-firebase-proto/static/js/main.c9044681.chunk.js.map",
+    "main.js": "https://jacobko.info/chat-app-firebase-proto/static/js/main.df8ab115.chunk.js",
+    "main.js.map": "https://jacobko.info/chat-app-firebase-proto/static/js/main.df8ab115.chunk.js.map",
     "runtime-main.js": "https://jacobko.info/chat-app-firebase-proto/static/js/runtime-main.6d2d89a1.js",
     "runtime-main.js.map": "https://jacobko.info/chat-app-firebase-proto/static/js/runtime-main.6d2d89a1.js.map",
     "static/js/2.2c2ef6d5.chunk.js": "https://jacobko.info/chat-app-firebase-proto/static/js/2.2c2ef6d5.chunk.js",
@@ -12,6 +12,6 @@
   "entrypoints": [
     "static/js/runtime-main.6d2d89a1.js",
     "static/js/2.2c2ef6d5.chunk.js",
-    "static/js/main.c9044681.chunk.js"
+    "static/js/main.df8ab115.chunk.js"
   ]
 }
