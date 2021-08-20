@@ -1,5 +1,12 @@
 {
-  "cSpell.words": ["Firestore", "MESSAGIN", "fbase", "uuidv"],
+  "cSpell.words": [
+    "Firestore",
+    "MESSAGIN",
+    "fbase",
+    "fortawesome",
+    "newchat",
+    "uuidv"
+  ],
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"

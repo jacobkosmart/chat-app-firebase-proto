@@ -5,10 +5,9 @@ import { dbService, storageService } from "../fbase";
 
 const Chat = ({ chatObj, isOwner }) => {
   const [editing, setEditing] = useState(false);
-  const [newchat, setNewchat] = useState(chatObj.text);
-
+  const [newChat, setNewChat] = useState(chatObj.text);
   const onDeleteClick = async () => {
-    const ok = window.confirm("Are you sure you want to delete this ch?");
+    const ok = window.confirm("Are you sure you want to delete this chat?");
     if (ok) {
       await dbService.doc(`chats/${chatObj.id}`).delete();
       await storageService.refFromURL(chatObj.attachmentUrl).delete();
@@ -18,7 +17,7 @@ const Chat = ({ chatObj, isOwner }) => {
   const onSubmit = async (event) => {
     event.preventDefault();
     await dbService.doc(`chats/${chatObj.id}`).update({
-      text: newchat,
+      text: newChat,
     });
     setEditing(false);
   };
@@ -26,8 +25,9 @@ const Chat = ({ chatObj, isOwner }) => {
     const {
       target: { value },
     } = event;
-    setNewchat(value);
+    setNewChat(value);
   };
+
   return (
     <div className="chat">
       {editing ? (
@@ -36,7 +36,7 @@ const Chat = ({ chatObj, isOwner }) => {
             <input
               type="text"
               placeholder="Edit your chat"
-              value={newchat}
+              value={newChat}
               required
               autoFocus
               onChange={onChange}
@@ -51,7 +51,9 @@ const Chat = ({ chatObj, isOwner }) => {
       ) : (
         <>
           <h4>{chatObj.text}</h4>
-          {chatObj.attachmentUrl && <img src={chatObj.attachmentUrl} alt="" />}
+          {chatObj.attachmentUrl && (
+            <img src={chatObj.attachmentUrl} alt="img" />
+          )}
           {isOwner && (
             <div class="chat__actions">
               <span onClick={onDeleteClick}>
@@ -67,5 +69,4 @@ const Chat = ({ chatObj, isOwner }) => {
     </div>
   );
 };
-
 export default Chat;

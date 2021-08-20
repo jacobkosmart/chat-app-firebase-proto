@@ -1,30 +1,34 @@
 import React, { useEffect, useState } from "react";
 import useTitle from "@jacob-hooks/use-title";
 import { authService } from "../fbase";
-import AppRouter from "./Router";
+import AppRouter from "./AppRouter";
 
 function App() {
   useTitle("Chat-app");
   // authService.currentUser 를 통해 로그인 되었는지 안되었는지 확인 할 수 있음 (로그인 안되어 있으면 null 이 return )
   const [init, setInit] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userObj, setUserObj] = useState(null);
 
   useEffect(() => {
     authService.onAuthStateChanged((user) => {
       if (user) {
-        setIsLoggedIn(true);
-        // console.log 해보면 user 의 정보의 양이 많기 때문에 setUserObj 에서 필요한 정보만 불러 올수 있게 지정해줌 (App 구동 속도 향상됨 )
-        // console.log(user);
+        if (user.displayName === null) {
+          const ind = user.email.indexOf("@");
+          const end = user.email.substring(0, ind);
+          user.updateProfile({ displayName: end });
+        }
         setUserObj({
           displayName: user.displayName,
           uid: user.uid,
           updateProfile: (args) => user.updateProfile(args),
         });
+
+        // console.log 해보면 user 의 정보의 양이 많기 때문에 setUserObj 에서 필요한 정보만 불러 올수 있게 지정해줌 (App 구동 속도 향상됨 )
+        // console.log(user);
         // 다른 방법으로 user 를 전체 가지고 온다음에 Object.assign() 하는 방법
         // setUserObj(user);
       } else {
-        setIsLoggedIn(false);
+        setUserObj(null);
       }
       setInit(true);
     });
@@ -34,7 +38,7 @@ function App() {
   // userObj 의 정보의 양이 많기 때문에 react 에서 re-render 가 되지 않기 때문에 필요한 정보만 불러와서 사용해야 함
   const refreshUser = () => {
     const user = authService.currentUser;
-    // console.log(authService.currentUser.displayName);
+    console.log(authService.currentUser.displayName);
     setUserObj({
       displayName: user.displayName,
       uid: user.uid,
@@ -48,14 +52,17 @@ function App() {
     <>
       {init ? (
         <AppRouter
+          basename={process.env.PUBLIC_URL}
           refreshUser={refreshUser}
-          isLoggedIn={isLoggedIn}
+          isLoggedIn={Boolean(userObj)}
           userObj={userObj}
         />
       ) : (
         "Initializing...."
       )}
-      <footer>&copy; {new Date().getFullYear()} Jacob Ko</footer>
+      <div className="footer">
+        <footer>&copy; {new Date().getFullYear()} Jacob Ko</footer>
+      </div>
     </>
   );
 }
