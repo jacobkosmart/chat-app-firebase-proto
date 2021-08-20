@@ -20,7 +20,7 @@ const Home = ({ userObj }) => {
   return (
     <div className="container">
       <ChatMaker userObj={userObj} />
-      <div style={{ marginTop: 30 }}>
+      <div style={{ marginTop: 20 }}>
         {chats.map((chat) => (
           <Chat
             key={chat.id}
