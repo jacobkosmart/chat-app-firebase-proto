@@ -61,7 +61,7 @@ function App() {
         "Initializing...."
       )}
       <div className="footer">
-        <footer>&copy; {new Date().getFullYear()} Jacob Ko</footer>
+        <footer>&copy; {new Date().getFullYear()} Jacob TAEHYUN Ko</footer>
       </div>
     </>
   );
