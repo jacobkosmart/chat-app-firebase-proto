@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import useTitle from "@jacob-hooks/use-title";
 import { authService } from "../fbase";
 import AppRouter from "./AppRouter";
+import { AiFillGithub, AiOutlineHome, AiOutlineMail } from "react-icons/ai";
 
 function App() {
   useTitle("Chat-app");
@@ -61,7 +62,24 @@ function App() {
         "Initializing...."
       )}
       <div className="footer">
-        <footer>&copy; {new Date().getFullYear()} Jacob TAEHYUN Ko</footer>
+        <footer className="footer__text">
+          &copy; {new Date().getFullYear()} Jacob Ko
+        </footer>
+        <div className="footer__logo">
+          <a href="https://jacobko.info/" target="_blank" rel="noreferrer">
+            <AiOutlineHome />
+          </a>
+          <a
+            href="https://github.com/jacobkosmart"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <AiFillGithub />
+            <a href="mailto: jacobkosmart@gmail.com">
+              <AiOutlineMail />
+            </a>
+          </a>
+        </div>
       </div>
     </>
   );

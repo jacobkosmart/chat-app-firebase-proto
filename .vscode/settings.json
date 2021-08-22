@@ -5,6 +5,7 @@
     "fbase",
     "fortawesome",
     "newchat",
+    "noreferrer",
     "uuidv"
   ],
   "editor.defaultFormatter": "esbenp.prettier-vscode",
