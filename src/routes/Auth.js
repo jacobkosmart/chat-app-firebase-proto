@@ -51,7 +51,7 @@ const Auth = () => {
               <AiOutlineHome />
             </a>
             <a
-              href="https://github.com/jacobkosmart"
+              href="https://github.com/jacobkosmart/chat-app-react-firebase"
               target="_blank"
               rel="noreferrer"
             >
